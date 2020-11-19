@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FontAwesomeIcons.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">minifx-workbench</a> &gt; <a href="index.source.html" class="el_package">org.minifx.workbench.util</a> &gt; <span class="el_source">FontAwesomeIcons.java</span></div><h1>FontAwesomeIcons.java</h1><pre class="source lang-java linenums">/**
+ * Copyright (c) 2017 European Organisation for Nuclear Research (CERN), All Rights Reserved.
+ */
+
+package org.minifx.workbench.util;
+
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import de.jensd.fx.glyphs.fontawesome.utils.FontAwesomeIconFactory;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+
+public final class FontAwesomeIcons {
+
+    private FontAwesomeIcons() {
+        /* static methods */
+    }
+
+    private static final int DEFAULT_ICON_SIZE = 32;
+
+    public static Text getFontAwesome(FontAwesomeIcon icon) {
+<span class="nc" id="L21">        return getFontAwesome(icon, DEFAULT_ICON_SIZE, Color.BLACK);</span>
+    }
+
+    public static Text getFontAwesome(FontAwesomeIcon icon, int size) {
+<span class="nc" id="L25">        return getFontAwesome(icon, size, Color.BLACK);</span>
+    }
+
+    public static Text getFontAwesome(FontAwesomeIcon icon, int size, Color color) {
+<span class="nc" id="L29">        Text textIcon = FontAwesomeIconFactory.get().createIcon(icon, Integer.toString(size));</span>
+<span class="nc" id="L30">        textIcon.setFill(color);</span>
+<span class="nc" id="L31">        return textIcon;</span>
+    }
+
+    public static Text getFontAwesome(FontAwesomeIcon icon, Color color) {
+<span class="nc" id="L35">        return getFontAwesome(icon, DEFAULT_ICON_SIZE, color);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
